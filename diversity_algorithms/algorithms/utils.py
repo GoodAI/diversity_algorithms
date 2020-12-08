@@ -43,7 +43,7 @@ def generate_exp_name(name=""):
         sep="_"
     else:
         sep=""
-    run_name=d.strftime(name+sep+"%Y_%m_%d-%H:%M:%S")
+    run_name=d.strftime(name+sep+"%Y_%m_%d-%H_%M_%S")
     nb=0
     not_created=True
     while(not_created):
