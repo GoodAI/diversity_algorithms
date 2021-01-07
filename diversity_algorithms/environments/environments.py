@@ -131,3 +131,18 @@ registered_environments["Billiard"] = {
 		"nb_bin": 50
 	}
 }
+
+registered_environments["SpaceEngineers-Maze"] = {
+	"bd_func": space_engineers_behavior_descriptor,
+	"eval": gym_env.EvaluationFunctor,
+	"eval_params": {
+		"gym_env_name":"SpaceEngineers-v0",
+		"gym_params":{},
+		"max_step": 1500,
+		"output":"final_reward"},
+	"grid_features": {
+		"min_x": [-100, -100],
+		"max_x": [100, 100],
+		"nb_bin": 25
+	}
+}

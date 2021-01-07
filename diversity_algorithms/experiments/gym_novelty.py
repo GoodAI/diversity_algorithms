@@ -13,6 +13,11 @@ except ImportError:
     print("WARNING: gym_billiard not found. Billiard-based environments will not work.")
 
 try:
+    import gym_space_engineers
+except ImportError:
+    print("WARNING: gym_space_engineers not found. Space Engineers-based environments will not work.")
+
+try:
     import gym_fastsim
 except ImportError:
     print("WARNING: gym_fastsim not found. Fastsim-based environments will not work.")

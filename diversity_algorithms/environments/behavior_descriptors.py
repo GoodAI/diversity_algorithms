@@ -4,7 +4,9 @@
 """ Alexandre Coninx
     ISIR CNRS/UPMC
     22/08/2019
-""" 
+"""
+
+import numpy as np
 
 def maze_behavior_descriptor(traj):
 	"""
@@ -35,5 +37,13 @@ def billiard_behavior_descriptor(traj):
   last_step_data = traj[-1]
   last_obs = last_step_data[0]
   return last_obs[:2]
+
+def space_engineers_behavior_descriptor(traj):
+  """
+  Computes the behavior descriptor from a trajectory.
+  Returns the position of the agent in the last observation.
+  """
+  last_step_data = traj[-1]
+  return last_step_data[3]['position']
 
 
