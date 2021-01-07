@@ -176,7 +176,7 @@ def novelty_ea(evaluate, params, pool=None):
         ind.dist_to_parent=0
         if (emo): 
             if (varian == "NS+Fit"):
-                ind.fitness.values = (ind.novelty, ind.fit)
+                ind.fitness.values = (ind.novelty, ind.fit[0])
             elif (varian == "NS+BDDistP"):
                 ind.fitness.values = (ind.novelty, 0)
             elif (varian == "NS+Fit+BDDistP"):
@@ -263,7 +263,7 @@ def novelty_ea(evaluate, params, pool=None):
                 ind.dist_to_parent=np.linalg.norm(np.array(ind.bd)-np.array(ind.parent_bd))
             if (emo):
                 if (varian == "NS+Fit"):
-                    ind.fitness.values = (ind.novelty, ind.fit)
+                    ind.fitness.values = (ind.novelty, ind.fit[0])
                 elif (varian == "NS+BDDistP"):
                     if (ind.parent_bd is None):
                         bddistp=0
