@@ -16,3 +16,13 @@ This fork contains changes to make it possible to communicate with the Space Eng
 
 *Notes:*
 Scoop is not working with the Space Engineers gym.
+
+## How to use
+
+`SpaceEngineers-Maze` environment was added to the dictionary of registered environments. The description of the environment can be found [here](https://github.com/GoodAI/SpaceEngineersGym).
+
+After running an experiment, it is possible to export behaviour descriptors to a text file and later use them with the [*/BDs load \<filename\>*](https://github.com/GoodAI/iv4xr-se-plugin#bds-load-filename) command. In order to do that, run the *diversity_algorithms/space_engineers/export_behaviours.py* like this:
+
+```
+python3 export_behaviours.py folder_with_results output.txt
+```
